@@ -38,14 +38,10 @@ To clone the repo:
 Script is all self contained and pulls data from the library NHSRdatasets
 
 #### Outputs
-No outputs are produced beyond consol results
+???????????No outputs are produced beyond console results
 
 #### Datasets
 Psuedo data from the library NHSRdatasets
-
-### Roadmap
-Additional sections around Tables and Charts to be considered.
-Not sure if script along is best method or if more traditional slide method could be used.  Would consider converting to quarto slides.
 
 ### Contributing
 
@@ -74,7 +70,7 @@ of the [Open Government 3.0][ogl] licence.
 [ogl]: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 
 ### Contact
-Simon Wellesley-Miller
+Lyn Howard
 
-To find out more  get in touch at [Simon.Wellesley-Miller](mailto:simon.wellesley-miller@nhs.net).
+To find out more, get in touch at [Lyn.Howard](mailto:lynda.howard@nhs.net).
 
