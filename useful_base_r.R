@@ -1,4 +1,4 @@
-#library(tidyverse)
+library(tidyverse)
 library(NHSRdatasets)
 
 ################################
@@ -9,7 +9,8 @@ library(NHSRdatasets)
 data <- ae_attendances
 
 # get list of column names
-colnames(data)
+colnames(data)      # works on matrices and data frames
+names(data)         # works on vectors and data frames
 
 # using $ sign to select a column
 data$type
@@ -29,8 +30,7 @@ data$type[4:10]
 # we also include the 10th entry 
 #  this is very different to how python does indexing
 
-# get number of distinct entries
-n_distinct(data$org_code)
+
 
 # get the range of a variable (useful for dates)
 range(data$period)
@@ -48,17 +48,28 @@ tail(data)
 head(data, 
      15)
 
-# see the first 15 rows of data - but using dpylr
-top_n(data, 
-      15)
+## Some useful functions from the dplyr package
 
-# see the first 15% of total rows of data - but using dpylr
+# see the first 15 rows of data 
+dplyr::slice_head(data, 
+      n = 15)
+
+# see the first 15% of total rows of data 
 # (defaults to last variable to order by)
-top_frac(data, 
-         .15)
+slice_head(data,
+           prop = .15)
 
 # see the first 15% of total rows of data - but using dpylr
 # ordered by attendances
-top_frac(data, 
-         .15, 
-         attendances)
+slice_head(data, 
+         prop = .15, 
+         order_by = attendances)
+
+
+
+
+
+
+
+
+
