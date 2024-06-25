@@ -55,21 +55,11 @@ dplyr::slice_head(data,
       n = 15)
 
 # see the first 15% of total rows of data 
-# (defaults to last variable to order by)
 slice_head(data,
            prop = .15)
 
-# see the first 15% of total rows of data - but using dpylr
+# see the first 15% of total rows of data
 # ordered by attendances
-slice_head(data, 
+slice_max(data, 
          prop = .15, 
          order_by = attendances)
-
-
-
-
-
-
-
-
-
