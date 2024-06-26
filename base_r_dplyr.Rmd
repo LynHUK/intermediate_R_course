@@ -16,7 +16,7 @@ library(learnr)
 
 ```{r total_attendance, echo=FALSE}
 
-learnr::question_numeric("What is the total attendance accross the 5 rows with the lowest attendances?",
+learnr::question_numeric("What is the total attendance across the 5 rows with the lowest attendances?",
 answer("15", correct = TRUE),
 correct = "Correct! 
 
