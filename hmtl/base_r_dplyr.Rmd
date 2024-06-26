@@ -1,0 +1,33 @@
+---
+title: "Base R and Dplyr functions"
+author: "Lyn Howard"
+date: "`r Sys.Date()`"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(learnr)
+```
+![](https://youtu.be/JfWm-ECqXts)
+
+## Test your understanding
+
+```{r total_attendance, echo=FALSE}
+
+learnr::question_numeric("What is the total attendance accross the 5 rows with the lowest attendances?",
+answer("15", correct = TRUE),
+correct = "Correct! 
+
+You can use code similar to 
+> q1_df<- slice_min(data, n=5, order_by = breaches)
+
+> sum(q1_df$attendances)
+
+to get the total.",
+try_again = "Incorrect. Use ?slice to look at the help file to find the function you need to get a small dataframe of the 5 rows with the lowest attendance. You can then use sum() to get the total of the attendances column.",
+allow_retry = TRUE)
+```
+
+
