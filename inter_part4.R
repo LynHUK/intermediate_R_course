@@ -7,8 +7,7 @@ data <- ae_attendances
 # select statement #
 ####################
 
-# The super useful select statement
-# in very simple terms this works like a sql select statement
+# The select function in simple terms works like a sql select statement
 # we can select columns from our dataframe and in addition they
 # will be ordered in the order we select them
 data_select <- data |>
@@ -66,19 +65,3 @@ data_select <- data |>
           breaches, 
           everything())
 
-# <<< Over to you >>>>
-
-# select the data so that it is order of admissions, 
-# any column that is a factor and then anything else
-
-
-
-
-
-
-data_select <- data |>
-  select(admissions,
-         where(is.factor),
-         everything())
-
-#########################
