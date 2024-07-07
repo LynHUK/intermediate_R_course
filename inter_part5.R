@@ -1,11 +1,6 @@
-####################################################
-# alternative joins - row and column concatenation #
-####################################################
-
-# a few more things to join datasets together
-# standard joins are covered in the introduction course in some detail
-
-# this is about joining tables without keys
+library(dplyr)
+# ensure we are using a clean data frame
+data <- NHSRdatasets::ae_attendances
 
 df_one <- data |>
   select (period,
@@ -18,15 +13,16 @@ df_two <- data |>
   select (where(is.numeric)) |>
   head()
 
-# jam the two data frames together, side by side
+# connect the two data frames together, side by side
 # column bind
 
 df_new <- cbind(df_one,
                 df_two)
 
-# note duplicated column is duplicated - which can cause issues - best to remove
+# note "attendances" column is duplicated - which can cause issues - best to remove
 # or rename - also maintains order - need to be mindful you have rows that line 
 # up
+
 
 # we can also bind data frames by rows, this is similar to concatenation 
 # in sql, need matching columns
