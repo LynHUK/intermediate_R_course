@@ -54,27 +54,6 @@ df_new <- bind_rows(df_one,
 
 # or in a pipe
 
-df_new <- df_new |>
+df_new <- df_one |>
   bind_rows(df_two)
 
-# <<< Over to you >>>>
-
-# create a dataframe of the top 5 admissions only
-# and the bottom 5 attendances only and join the two columns together
-
-
-
-
-
-
-
-df_one <- data |>
-  select(admissions) |>
-  top_n(5, admissions)
-
-df_two <- data |>
-  select(attendances) |>
-  top_n(-5, attendances)
-
-df_new <- bind_cols(df_one, 
-                    df_two)

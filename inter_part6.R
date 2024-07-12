@@ -76,27 +76,3 @@ data_filter <- data |>
   filter(type == '1' | 
            attendances > 10000)
 
-# <<< Over to you >>>>
-
-# can you write a script to check if we have one row per org_code
-# if we have not, return only those where we have more than one row?
-# and for bonus points put them in order by number of rows?
-
-
-
-
-
-
-# HINT - you can count on the fact we have already covered how to do this
-# and maybe look at what else the function can do (?count)
-
-
-
-
-
-
-data_filter <- data |>
-  count(org_code,
-        sort = TRUE) |>
-  filter (n > 1)
-
